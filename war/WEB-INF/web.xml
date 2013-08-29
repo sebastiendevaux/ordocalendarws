@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <!-- Application class name -->  
+    <context-param>  
+       <param-name>org.restlet.application</param-name>  
+       <param-value>  
+          com.ordocalendarws.controler.rest.OrdoApplication  
+       </param-value>  
+    </context-param>
+    
+     <!-- Restlet adapter -->  
+    <servlet>  
+       <servlet-name>OrdoServlet</servlet-name>  
+       <servlet-class>  
+          org.restlet.ext.servlet.ServerServlet  
+       </servlet-class>  
+    </servlet>  
+   
+    <!-- Catch all requests -->  
+    <servlet-mapping>  
+       <servlet-name>OrdoServlet</servlet-name>  
+       <url-pattern>/*</url-pattern>  
+    </servlet-mapping>
+    
+     <servlet>
+	   <servlet-name>SystemServiceServlet</servlet-name>
+	   <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+	   <init-param>
+	     <param-name>services</param-name>
+	     <param-value/>
+	  </init-param>
+	 </servlet>
+	 
+	 <servlet-mapping>
+	   <servlet-name>SystemServiceServlet</servlet-name>
+	   <url-pattern>/_ah/spi/*</url-pattern>
+	 </servlet-mapping>
+    
+    <security-constraint>
+      <web-resource-collection>
+        <url-pattern>/cron/purgelogs</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>admin</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+     <security-constraint>
+      <web-resource-collection>
+        <url-pattern>/cron/update/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>admin</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+     <security-constraint>
+      <web-resource-collection>
+        <url-pattern>/cron/twitter</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>admin</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+      <web-resource-collection>
+        <url-pattern>/stats/</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>admin</role-name>
+      </auth-constraint>
+    </security-constraint>
+</web-app>
