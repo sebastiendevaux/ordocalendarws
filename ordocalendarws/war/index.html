@@ -1,29 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
 
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Calendrier Catholique traditionnel</title>
     <link rel="alternate" type="application/rss+xml" title="Flux RSS quotidien du calendrier catholique traditionnel" href="/rss/" />
+    <style type="text/css">
+      img { margin: 2px; }
+      p { margin-bottom: 1em}
+      div {  margin-bottom: 3em}
+      .follow { height:80px }
+      .powered { height:30px }
+    </style>
   </head>
-
   <body style="color:rgb(60,60,60);font-family:'Lucida Sans', 'Lucida Grande', sans-serif">
     <h1 style="margin-bottom:-0.2em;font-size:250%;font-family: times, Times New Roman, times-roman, georgia, serif;letter-spacing:-1px;color:rgb(102,149,23)">Calendrier Catholique Traditionnel</h1>
-    <p style="font-weight:bold;font-style:italic;font-size:85%">La fête et les offices pour tous les jours du calendrier catholique traditionnel.</p>
+    <p style="font-weight:bold;font-style:italic;font-size:85%;margin-bottom:3em">La fête et les offices pour tous les jours du calendrier catholique traditionnel.</p>
     
-    <div style="margin-top:2em">
+    <div>
       <p>Pour suivre chaque jour le calendrier :</p>
-      <a href="https://twitter.com/sanctoral"><img alt="twitter" src="http://www.insitedesignlab.com/wp-content/themes/Greyscale/images/icon_twitter.png" /></a>
-      <a href="rss/"><img alt="rss" src="http://www.insitedesignlab.com/wp-content/themes/Greyscale/images/feed.png" /></a>
+      <a href="https://twitter.com/sanctoral"><img class="follow" alt="twitter" src="https://abs.twimg.com/a/1377795275/images/resources/twitter-bird-white-on-blue.png"/></a>
+      <a href="rss/"><img class="follow" alt="rss" src="http://www.tool-blog.fr/wp-content/uploads/2012/01/RSS-Icon.png" /></a>
 	</div>
 	
-	<div style="margin-top:4em">
+	<div>
 		<p>Web Services (REST) disponibles :</p>
 	    <table>
 	      <tr>
@@ -39,11 +39,18 @@
 	    </table>
     </div>
     
-    <p style="margin-top:4em;margin-bottom:3em">Pour autoriser le service à poster un message via votre compte twitter chaque jour : <a href="cron/twitter/auth/">ici</a></p>
+    <div>
+      <p>Pour autoriser le service à poster un message via votre compte twitter chaque jour : <a href="cron/twitter/auth/">ici</a></p>
+    </div>
+    
+    <div>
+      <p>Sources du projet disponibles sur <a href="https://github.com/sebastiendevaux/ordocalendarws">GitHub</a></p>
+    </div>
     
     <div style="margin-top:3em">
-      <a href="http://twitter4j.org/"><img src="http://twitter4j.org/en/images/powered-by-badge/powered-by-twitter4j-138x30.png" alt="Powered by Twitter4J"></a>
-      <img src="https://developers.google.com/appengine/images/appengine-noborder-120x30.gif" alt="Powered by Google App Engine" />
+      <a href="http://twitter4j.org/"><img class="powered" src="http://twitter4j.org/en/images/powered-by-badge/powered-by-twitter4j-138x30.png" alt="Powered by Twitter4J"></a>
+      <img class="powered" src="https://developers.google.com/appengine/images/appengine-noborder-120x30.gif" alt="Powered by Google App Engine" />
+      <a href="https://github.com/sebastiendevaux/ordocalendarws"><img class="powered" src="https://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Logo.png" alt="Powered by GitHub" /></a>
     </div>
   </body>
 </html>
