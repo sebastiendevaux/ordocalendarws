@@ -22,10 +22,10 @@ public class OrdoDayObject implements java.io.Serializable {
 	private Date _date;
 	
 	@Persistent
-	private String _feast;
+	private String _liturgy;
 	
 	@Persistent
-	private String _feast_class;
+	private String _class;
 	
 	@Persistent
 	private String _color;
@@ -41,12 +41,12 @@ public class OrdoDayObject implements java.io.Serializable {
 		return _date;
 	}
 	
-	public String getFeast() {
-		return _feast;
+	public String getLiturgy() {
+		return _liturgy;
 	}
 	
-	public String getFeastClass() {
-		return _feast_class;
+	public String getClassOfDay() {
+		return _class;
 	}
 	
 	public String getColor() {
@@ -64,13 +64,13 @@ public class OrdoDayObject implements java.io.Serializable {
 	/**
 	 * Constructeur de la classe
 	 * @param date Date du jour
-	 * @param feast Titre du jour
-	 * @param feast_class Classe du jour
+	 * @param liturgy Titre du jour
+	 * @param day_class Classe du jour
 	 * @param color Couleur liturgique
 	 * @param epitre Référence du texte de l'Epitre
 	 * @param evangile Référence du texte de l'Evangile
 	 */
-	public OrdoDayObject(String date, String feast, String feast_class, String color, String epitre, String evangile) {
+	public OrdoDayObject(String date, String liturgy, String day_class, String color, String epitre, String evangile) {
 		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		
 		try {
@@ -79,8 +79,8 @@ public class OrdoDayObject implements java.io.Serializable {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		_feast = feast;
-		_feast_class = feast_class;
+		_liturgy = liturgy;
+		_class = day_class;
 		_color = color;
 		_epitre = epitre;
 		_evangile = evangile;

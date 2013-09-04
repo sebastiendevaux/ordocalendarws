@@ -83,7 +83,7 @@ public class OrdoDayRessource extends ServerResource {
 			OrdoDayObject od = OrdoDayModel.getDay(date);
 			
 			if(od == null) {
-				return generateErrorRepresentation("date pas trouvŽe:"+date+" !");
+				return generateErrorRepresentation("date pas trouvée:"+date+" !");
 			}
 			
 			// Generate a DOM document
@@ -95,13 +95,13 @@ public class OrdoDayRessource extends ServerResource {
 			d.appendChild(r);
 			
 			// Titre du jour
-			Element eltFeast = d.createElement("fete");
-			eltFeast.appendChild(d.createTextNode(od.getFeast()));
+			Element eltFeast = d.createElement("liturgie");
+			eltFeast.appendChild(d.createTextNode(od.getLiturgy()));
 			r.appendChild(eltFeast);
 			
 			// Classe
 			Element eltClass = d.createElement("classe");
-			eltClass.appendChild(d.createTextNode(od.getFeastClass()));
+			eltClass.appendChild(d.createTextNode(od.getClassOfDay()));
 			r.appendChild(eltClass);
 			
 			// Couleur

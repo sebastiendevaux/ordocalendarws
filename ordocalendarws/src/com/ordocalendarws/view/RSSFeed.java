@@ -56,7 +56,7 @@ public class RSSFeed extends ServerResource {
 			
 			// title - description - lastBuildDate - language
 			elt_channel.appendChild(createNode("title", "Calendrier catholique traditionnel"));
-			elt_channel.appendChild(createNode("description", "Détails de la fête et des offices liturgiques dans le calendrier catholique traditionnel."));
+			elt_channel.appendChild(createNode("description", "D√©tails de la f√™te et des offices liturgiques dans le calendrier catholique traditionnel"));
 			elt_channel.appendChild(createNode("lastBuildDate", RFC822DATEFORMAT.format(Calendar.getInstance().getTime())));
 			elt_channel.appendChild(createNode("link", "https://ordocalendarws.appspot.com/"));
 			elt_channel.appendChild(createNode("language", "fr-fr"));
@@ -71,9 +71,9 @@ public class RSSFeed extends ServerResource {
 			elt_channel.appendChild(elt_item);
 			
 			// title - description
-			elt_item.appendChild(createNode("title", od.getFeast()));
+			elt_item.appendChild(createNode("title", od.getLiturgy()));
 			Element des = d.createElement("description");
-			des.appendChild(d.createCDATASection(String.format("<i>%s</i><br/>%n<u>%s</u>, %s<br/>%nEpitre : %s<br/>%nEvangile : %s", OrdoDayRessource.getCurrentLongDate(),  od.getFeastClass(), od.getColor(), od.getEpitre(), od.getEvangile())));
+			des.appendChild(d.createCDATASection(String.format("<i>%s</i><br/>%n<u>%s</u>, %s<br/>%nEpitre : %s<br/>%nEvangile : %s", OrdoDayRessource.getCurrentLongDate(),  od.getClassOfDay(), od.getColor(), od.getEpitre(), od.getEvangile())));
 			elt_item.appendChild(des);
 			Element guid = d.createElement("guid");
 			guid.setAttribute("isPermaLink", "false");

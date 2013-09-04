@@ -47,7 +47,7 @@ public class TwitterMsg extends ServerResource {
 						Twitter twitter = factory.getInstance();
 						twitter.setOAuthConsumer("94Bsx28YkfgmEjMlTFqtZA", "EeYZHOZNGDbxVwm8NnFSwpagem810ZnRvVTi8XBBsY");
 						twitter.setOAuthAccessToken(accessToken);
-						Status status = twitter.updateStatus("Aujourd'hui " + date_fr + ": " + od.getFeast() + " - " + od.getFeastClass() + ", " + od.getColor());
+						Status status = twitter.updateStatus("Aujourd'hui " + date_fr + ": " + od.getLiturgy() + " - " + od.getClassOfDay() + ", " + od.getColor());
 						ret = "Successfully updated the status to [" + status.getText() + "] for " + twitter.getScreenName();
 					}
 				} else {
