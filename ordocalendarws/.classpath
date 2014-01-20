@@ -12,6 +12,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/org.restlet.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/opencsv-2.3.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/googlechartwrapper_1.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/twitter4j-core-3.0.3.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/twitter4j-core-3.0.5.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
